@@ -29,7 +29,7 @@ function Room() {
   };
   return (
     <div className='flex-1'>
-      <div className='sticky scroll-mx-6 z-50 px-2 flex items-center top-0 h-16 w-full border-b border-neutral-800'>
+      <div className='sticky bg-neutral-900 scroll-mx-6 z-50 px-2 flex items-center top-0 h-16 w-full border-b border-neutral-800'>
         <div className='flex items-center gap-4 px-4'>
           <div className='w-10 h-10 rounded-full bg-neutral-800'>
             <img
@@ -45,7 +45,7 @@ function Room() {
           </div>
         </div>
       </div>
-      <div className='overflow-y-scroll max-w-4xl m-auto h-full pb-20 flex flex-col justify-end gap-2'>
+      <div className='overflow-y-scroll max-h-fit w-full px-4 m-auto pb-20 flex flex-col gap-3'>
         {currentChats.chatlog &&
           currentChats.chatlog?.map((chat) => {
             return (
@@ -57,7 +57,7 @@ function Room() {
               />
             );
           })}
-        {!currentChats.chatlog && <div className='text-white'>Loading...</div>}
+        {!currentChats.chatlog && <div className='text-white'>No Chats</div>}
       </div>
       <div className='w-full h-16 px-4 fixed bottom-0 bg-neutral-800 flex items-center gap-2'>
         <div className='space-x-2'>
