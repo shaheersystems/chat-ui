@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ChatListItem({ name, avatar, latestTimestamp, lastChat }) {
+function ChatListItem({ id, name, avatar, latestTimestamp, lastChat }) {
   return (
-    <Link to=''>
-      <div className='w-full bg-white max-h-fit py-3 px-4 border-b hover:bg-gray-100 flex items-center gap-2'>
+    <Link to={`rooms/${id}`}>
+      <div className='w-full bg-neutral-900 text-white max-h-fit py-3 px-4 border-b border-neutral-800 hover:bg-neutral-800 flex items-center gap-2'>
         <div className='h-12 w-12'>
           <img
-            className='rounded-full h-full w-full border'
+            className='rounded-full h-full w-full border border-neutral-800'
             src={avatar}
             alt=''
           />

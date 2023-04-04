@@ -2,13 +2,13 @@ import React from "react";
 
 function SearchBar({ onChange, query }) {
   return (
-    <div className='h-[8vh] w-full px-4 py-2 flex gap-2'>
-      <div className='flex-1 px-4 flex gap-4 items-center bg-gray-100 rounded-lg'>
+    <div className='h-[8vh] w-full px-4 py-2 bg-neutral-900 flex gap-2'>
+      <div className='flex-1 px-4 flex gap-4 items-center bg-neutral-800 rounded-lg'>
         <label htmlFor='searchInput'>
           <svg
             width={22}
             height={22}
-            fill='#00000'
+            fill='white'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
           >
@@ -20,17 +20,17 @@ function SearchBar({ onChange, query }) {
           type='text'
           value={query}
           onChange={onChange}
-          className='w-full outline-none bg-gray-100'
+          className='w-full outline-none text-white bg-neutral-800'
           autoComplete='off'
           placeholder='Search chats'
         />
       </div>
       <div>
-        <button className='p-1 hover:bg-gray-100 rounded-full'>
+        <button className='p-1 hover:bg-neutral-800 rounded-full'>
           <svg
-            width={25}
-            height={25}
-            fill='#00000'
+            width={22}
+            height={22}
+            fill='white'
             viewBox='0 0 24 24'
             xmlns='http://www.w3.org/2000/svg'
           >

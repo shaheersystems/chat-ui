@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 function useSearch(items, query) {
   const filteredItems = items.filter((item) => {
     return item.name.toLowerCase().includes(query.toLowerCase());
